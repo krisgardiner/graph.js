@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Data Visuals - Three JS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="libraries/graph.js"></script>
+<script>
+
+var scaling = "fit"; // this will resize to fit inside the screen dimensions
+var width = 1024;
+var height = 768;
+
+var frame = new Frame(scaling, width, height);
+frame.on("ready", function() {
+    zog("ready from ZIM Frame");
+
+    var stage = frame.stage;
+    var stageW = frame.width;
+    var stageH = frame.height;
+    frame.outerColor = "#444";
+    frame.color = "#ddd";
+
+		var explosion = new action.Explosion();
+		action.jump();
+
+    //Modules are usually external scripts sepearated in different files
+    //CreateJS has modules: tweenJS
+    stage.update();
+
+}); // end of ready
+
+</script>
+
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+</head>
+
+<body>
+<!-- canvas with id="myCanvas" is made by zim Frame -->
+</body>
+</html>
