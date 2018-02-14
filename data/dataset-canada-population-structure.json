@@ -1,0 +1,1004 @@
+{
+	"Structure": {
+		"Header": {
+			"ID": "051-0005 [footnote reference:1,2,3,6]",
+			"Test": "true",
+			"Name": [
+				{
+					"_xml:lang": "en",
+					"__text": "Estimates of population, Canada, provinces and territories"
+				},
+				{
+					"_xml:lang": "fr",
+					"__text": "Estimations de la population, Canada, provinces et territoires"
+				}
+			],
+			"Prepared": "2017-12-19T18:30:04-05:00",
+			"Sender": {
+				"_id": "STATCAN"
+			},
+			"Receiver": {
+				"_id": "STATCAN"
+			}
+		},
+		"CodeLists": {
+			"CodeList": [
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Geography"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Géographie"
+						}
+					],
+					"Code": [
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Canada"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Canada"
+								}
+							],
+							"_value": "1",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Newfoundland and Labrador"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Terre-Neuve-et-Labrador"
+								}
+							],
+							"_value": "2",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Prince Edward Island"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Île-du-Prince-Édouard"
+								}
+							],
+							"_value": "3",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Nova Scotia"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Nouvelle-Écosse"
+								}
+							],
+							"_value": "4",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "New Brunswick"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Nouveau-Brunswick"
+								}
+							],
+							"_value": "5",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Quebec"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Québec"
+								}
+							],
+							"_value": "6",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Ontario"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Ontario"
+								}
+							],
+							"_value": "7",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Manitoba"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Manitoba"
+								}
+							],
+							"_value": "8",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Saskatchewan"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Saskatchewan"
+								}
+							],
+							"_value": "9",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Alberta"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Alberta"
+								}
+							],
+							"_value": "10",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "British Columbia"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Colombie-Britannique"
+								}
+							],
+							"_value": "11",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Yukon"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Yukon"
+								}
+							],
+							"_value": "12",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Northwest Territories including Nunavut"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Territoires du Nord-Ouest incluant Nunavut"
+								}
+							],
+							"Annotations": {
+								"Annotation": [
+									{
+										"AnnotationTitle": {
+											"__prefix": "common",
+											"__text": "4"
+										},
+										"AnnotationType": {
+											"__prefix": "common",
+											"__text": "Footnotes for Member"
+										},
+										"__prefix": "common"
+									},
+									{
+										"AnnotationType": {
+											"__prefix": "common",
+											"__text": "TERMINATED"
+										},
+										"__prefix": "common"
+									}
+								],
+								"__prefix": "structure"
+							},
+							"_value": "13",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Northwest Territories"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Territoires du Nord-Ouest"
+								}
+							],
+							"Annotations": {
+								"Annotation": {
+									"AnnotationTitle": {
+										"__prefix": "common",
+										"__text": "5"
+									},
+									"AnnotationType": {
+										"__prefix": "common",
+										"__text": "Footnotes for Member"
+									},
+									"__prefix": "common"
+								},
+								"__prefix": "structure"
+							},
+							"_value": "14",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "Nunavut"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "Nunavut"
+								}
+							],
+							"Annotations": {
+								"Annotation": {
+									"AnnotationTitle": {
+										"__prefix": "common",
+										"__text": "5"
+									},
+									"AnnotationType": {
+										"__prefix": "common",
+										"__text": "Footnotes for Member"
+									},
+									"__prefix": "common"
+								},
+								"__prefix": "structure"
+							},
+							"_value": "15",
+							"__prefix": "structure"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "CL_GEO",
+					"_version": "1.0",
+					"_isFinal": "false",
+					"__prefix": "structure"
+				},
+				{
+					"Code": {
+						"Description": [
+							{
+								"_xml:lang": "en",
+								"__prefix": "structure",
+								"__text": "Persons"
+							},
+							{
+								"_xml:lang": "fr",
+								"__prefix": "structure",
+								"__text": "Personnes"
+							}
+						],
+						"_value": "1",
+						"__prefix": "structure"
+					},
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "CL_STC_UNIT",
+					"_agencyID": "STATCAN",
+					"_version": "1.0",
+					"_isFinal": "false",
+					"__prefix": "structure"
+				},
+				{
+					"Code": [
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "p = Preliminary"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "p = Donnée provisoire"
+								}
+							],
+							"_value": "1",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "r = Revised"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "r = Donnée rectifiée"
+								}
+							],
+							"_value": "3",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "... = Not applicable"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "... = N''ayant pas lieu de figurer"
+								}
+							],
+							"_value": "4",
+							"__prefix": "structure"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "CL_OBS_SYMBOL",
+					"_agencyID": "STATCAN",
+					"_version": "1.0",
+					"_isFinal": "false",
+					"__prefix": "structure"
+				},
+				{
+					"Code": [
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": ".. = Not available for a specific reference period"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": ".. = Indisponible pour une période de référence précise"
+								}
+							],
+							"_value": "1",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "0 = Data rounded to 0"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "0 = Valeur arrondie à 0"
+								}
+							],
+							"_value": "2",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "A = Excellent"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "A = Excellent"
+								}
+							],
+							"_value": "3",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "B = Very good"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "B = Très bon"
+								}
+							],
+							"_value": "4",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "C = Good"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "C = Bon"
+								}
+							],
+							"_value": "5",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "D = Acceptable"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "D = Passable"
+								}
+							],
+							"_value": "6",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "E = Poor,Use with caution"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "E = Médiocre,Utiliser avec prudence"
+								}
+							],
+							"_value": "7",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "F = Too unreliable to be published"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "F = Trop peu fiable pour être publiée"
+								}
+							],
+							"_value": "8",
+							"__prefix": "structure"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "CL_OBS_STATUS",
+					"_agencyID": "STATCAN",
+					"_version": "1.0",
+					"_isFinal": "false",
+					"__prefix": "structure"
+				},
+				{
+					"Code": [
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "x = Suppressed to meet the confidentiality requirements of the Statistics Act"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "x = Confidentiel en vertu des dispositions de la Loi sur la statistique"
+								}
+							],
+							"_value": "1",
+							"__prefix": "structure"
+						},
+						{
+							"Description": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "structure",
+									"__text": "x = Suppressed to meet the confidentiality requirements of the Statistics Act"
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "structure",
+									"__text": "x = Confidentiel en vertu des dispositions de la Loi sur la statistique"
+								}
+							],
+							"_value": "2",
+							"__prefix": "structure"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "CL_OBS_CONF",
+					"_agencyID": "STATCAN",
+					"_version": "1.0",
+					"_isFinal": "false",
+					"__prefix": "structure"
+				}
+			]
+		},
+		"Concepts": {
+			"Concept": [
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Geography"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Géographie"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "GEO",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Time"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Temps"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "TIME_PERIOD",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Observation Value"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Valeur d'observation"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "OBS_VALUE",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Observation Symbol"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Symbol d'observation"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "OBS_SYMBOL",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Observation Status"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Observation Status"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "OBS_STATUS",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Observation Confidentiality"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Confidentiel d'observation"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "OBS_CONF",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Unit"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Unité"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "STC_UNIT",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Unit multplier"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Unité multiplicateur"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "UNIT_MULT",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Footnote reference for observation"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "référence de la note de renvoie d’observation"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "FOOTNOTE_REF",
+					"__prefix": "structure"
+				},
+				{
+					"Name": [
+						{
+							"_xml:lang": "en",
+							"__prefix": "structure",
+							"__text": "Archived"
+						},
+						{
+							"_xml:lang": "fr",
+							"__prefix": "structure",
+							"__text": "Archivé"
+						}
+					],
+					"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+					"_id": "TERMINATED",
+					"__prefix": "structure"
+				}
+			]
+		},
+		"KeyFamilies": {
+			"KeyFamily": {
+				"Components": {
+					"Dimension": {
+						"_conceptRef": "GEO",
+						"_codelist": "CL_GEO",
+						"__prefix": "structure"
+					},
+					"TimeDimension": {
+						"_conceptRef": "TIME_PERIOD",
+						"__prefix": "structure"
+					},
+					"PrimaryMeasure": {
+						"_conceptRef": "OBS_VALUE",
+						"__prefix": "structure"
+					},
+					"Attribute": [
+						{
+							"_conceptRef": "OBS_SYMBOL",
+							"_codelist": "CL_OBS_SYMBOL",
+							"_attachmentLevel": "Observation",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "OBS_STATUS",
+							"_codelist": "CL_OBS_STATUS",
+							"_attachmentLevel": "Observation",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "OBS_CONF",
+							"_codelist": "CL_OBS_CONF",
+							"_attachmentLevel": "Observation",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "FOOTNOTE_REF",
+							"_attachmentLevel": "Observation",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "TERMINATED",
+							"_attachmentLevel": "Observation",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "STC_UNIT",
+							"_codelist": "CL_STC_UNIT",
+							"_attachmentLevel": "Series",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "UNIT_MULT",
+							"_codelist": "CL_UNIT_MULT",
+							"_attachmentLevel": "Series",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						},
+						{
+							"_conceptRef": "DECIMALS",
+							"_attachmentLevel": "Series",
+							"_assignmentStatus": "Conditional",
+							"__prefix": "structure"
+						}
+					],
+					"__prefix": "structure"
+				},
+				"Annotations": {
+					"Annotation": [
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "1"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "Postcensal estimates are based on the 2011 Census counts adjusted for census net undercoverage (CNU) (including adjustment for incompletely enumerated Indian reserves (IEIR)) and the components of demographic growth that occurred since that census. Intercensal estimates are produced using counts from two consecutive censuses adjusted for CNU (including (IEIR) and postcensal estimates."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "Les estimations postcensitaires sont produites à partir des comptes du Recensement de 2011, rajustées pour le sous-dénombrement net du recensement (SDNR) (incluant le rajustement pour les réserves indiennes partiellement dénombrées (RIPD)) et des composantes de l'accroissement démographique survenu depuis ce recensement. Les estimations intercensitaires sont produites à l'aide des comptes de deux recensements consécutifs rajustés pour le SDNR (inlcuant les RIPD) et des estimations postcensitaires."
+								}
+							],
+							"__prefix": "common"
+						},
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "2"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "Quarterly population estimates: Quarter I = January 1; Quarter II = April 1; Quarter III = July 1; Quarter IV = October 1."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "Estimations trimestrielles de la population : Trimestre I = 1er janvier; Trimestre II = 1er avril; Trimestre III = 1er juillet; Trimestre IV = 1er octobre."
+								}
+							],
+							"__prefix": "common"
+						},
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "3"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "Estimates are final intercensal and unadjusted for census net undercoverage prior to July 1, 1971. Estimates are final intercensal from July 1, 1971 to April 1, 2011, final postcensal from July 1, 2011 to July 1, 2013, updated postcensal from October 1, 2013 to April 1, 2017 and preliminary postcensal from July 1, 2017."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "Les estimations sont intercensitaires définitives et non rajustées pour le sous-dénombrement net du recensement avant le 1er juillet 1971. Les estimations sont intercensitaires définitives du 1er juillet 1971 au 1er avril 2011, postcensitaires définitives du 1er juillet 2011 au 1er juillet 2013, postcensitaires mises à jour du 1er octobre 2013 au 1er avril 2017 et postcensitaires provisoires à partir du 1er juillet 2017."
+								}
+							],
+							"__prefix": "common"
+						},
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "4"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "Population estimates for Northwest Territories and Nunavut are presented separately from July 1, 1991."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "Les estimations de la population des Territoires du Nord-Ouest et du Nunavut sont présentées séparément à partir du 1er juillet 1991."
+								}
+							],
+							"__prefix": "common"
+						},
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "5"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "Prior to July 1, 1991, only population estimates for Northwest Territories and Nunavut combined are available."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "Avant le 1er juillet 1991, seules les estimations de la population des Territoires du Nord-Ouest et du Nunavut combinées sont disponibles."
+								}
+							],
+							"__prefix": "common"
+						},
+						{
+							"AnnotationTitle": {
+								"__prefix": "common",
+								"__text": "6"
+							},
+							"AnnotationType": {
+								"__prefix": "common",
+								"__text": "Footnotes"
+							},
+							"AnnotationText": [
+								{
+									"_xml:lang": "en",
+									"__prefix": "common",
+									"__text": "The population growth, which is used to calculate population estimates, is comprised of the natural growth (CANSIM 53-0001), international migration (CANSIM 51-0037) and interprovincial migration (CANSIM 51-0017 and 51-0045)."
+								},
+								{
+									"_xml:lang": "fr",
+									"__prefix": "common",
+									"__text": "L'accroissement démographique, qui sert au calcul des estimations de la population, est composé de l'accroissement naturel (CANSIM 53-0001), de la migration internationale (CANSIM 51-0037) et de la migration interprovinciale (CANSIM 51-0017 et 51-0045)."
+								}
+							],
+							"__prefix": "common"
+						}
+					],
+					"__prefix": "structure"
+				},
+				"_xmlns:structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+				"_version": "1.0",
+				"_isFinal": "false",
+				"__prefix": "structure"
+			}
+		},
+		"_xmlns": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message",
+		"_xmlns:Structure": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure",
+		"_xmlns:common": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/common",
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xsi:schemaLocation": "http://www.SDMX.org/resources/SDMXML/schemas/v2_0/structure http://www.sdmx.org/docs/2_0/SDMXStructure.xsd http://www.SDMX.org/resources/SDMXML/schemas/v2_0/message http://www.sdmx.org/docs/2_0/SDMXMessage.xsd"
+	}
+}

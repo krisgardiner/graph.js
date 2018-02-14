@@ -4,6 +4,8 @@
   "description": "Data visualization modules using three.js",
   "main": "index.js",
   "dependencies": {
+    "jquery": "^3.3.1",
+    "node": "^9.5.0",
     "three": "^0.89.0"
   },
   "devDependencies": {},

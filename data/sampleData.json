@@ -1,0 +1,73 @@
+{
+	"Country": [{
+      "id": 1,
+      "Name":"Canada",
+      "Population": 36885049
+		},
+		{
+      "id": 2,
+      "Name":"Newfoundland and Labrador",
+      : 2528430
+		},
+		{
+      "id": 3,
+			"Name":"Prince Edward Island",
+      "Population": 152784
+		},
+		{
+      "id": 4,
+			"Name":"Nova Scotia",
+      "Population": 957600
+		},
+		{
+      "id": 5,
+			"Name":"New Brunswick",
+      "Population": 760868
+		},
+		{
+      "id": 6,
+			"Name":"Quebec",
+      "Population": 8425996
+		},
+		{
+      "id": 7,
+			"Name":"Ontario",
+      "Population": 14279196
+		},
+		{
+      "id": 8,
+			"Name":"Manitoba",
+      "Population": 1343371
+		},
+		{
+      "id": 9,
+			"Name":"Saskatchewan",
+      "Population": 1168057
+		},
+		{
+      "id": 10,
+			"Name":"Alberta",
+      "Population": 4306039
+		},
+		{
+      "id": 11,
+			"Name":"British Columbia",
+      "Population": 4841078
+		},
+		{
+      "id": 12,
+			"Name":"Yukon",
+      "Population": 38669
+		},
+		{
+      "id": 13,
+			"Name":"Northwest Territories",
+      "Population": 44718
+		},
+		{
+      "id": 14,
+			"Name":"Nunavut",
+      "Population": 38243
+		}
+	]
+}

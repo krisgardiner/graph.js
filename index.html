@@ -3,40 +3,98 @@
 <head>
 <meta charset="utf-8" />
 <title>Data Visuals - Three JS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="libraries/graph.js"></script>
-<script>
-
-var scaling = "fit"; // this will resize to fit inside the screen dimensions
-var width = 1024;
-var height = 768;
-
-var frame = new Frame(scaling, width, height);
-frame.on("ready", function() {
-    zog("ready from ZIM Frame");
-
-    var stage = frame.stage;
-    var stageW = frame.width;
-    var stageH = frame.height;
-    frame.outerColor = "#444";
-    frame.color = "#ddd";
-
-		var explosion = new action.Explosion();
-		action.jump();
-
-    //Modules are usually external scripts sepearated in different files
-    //CreateJS has modules: tweenJS
-    stage.update();
-
-}); // end of ready
-
-</script>
-
-<meta name="viewport" content="width=device-width, user-scalable=no" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-<!-- canvas with id="myCanvas" is made by zim Frame -->
+  <script src="node_modules/three/build/three.js"></script>
+  <script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
+  <script src="libraries/graph.js"></script>
+  <script>
+
+  var camera, scene, renderer, controls, dirLight;
+  var MAX_DISTANCE = 350;
+  var MIN_DISTANCE = 1;
+  var line, lineMaterial, lineGeometry;
+  var gridHelper, axesHelper;
+
+  var windowHalfX = window.innerWidth / 2;
+	var windowHalfY = window.innerHeight / 2;
+
+  var dataJSON;
+  var dataTmp = [2528430, 152784, 957600, 760868, 8425996, 14279196, 1343371, 1168057, 4306039, 4841078, 38669, 44718, 38243];
+  var dataTitle = ["Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia", "New Brunswick", "Quebec", "Ontario", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut"];
+
+  var oReq = new XMLHttpRequest();
+  oReq.onload = reqListener;
+  oReq.open("get", "data/sampleData.json", true);
+  oReq.send();
+
+  function reqListener(e) {
+      // dataJSON = JSON.parse(this.responseText);
+      // dataTmp.push(dataJSON);
+      // console.log(dataJSON.Country[0].Canada);
+      // console.log(dataTmp[0].Country[0].Canada);
+  }
+
+  // console.log(rawJSON.Country[0]);
+
+  var loader = new THREE.FontLoader();
+  loader.load('assets/fonts/Roboto_Regular.json', function ( font ) {
+    init(font);
+    animate();
+  });
+
+  function init(font) {
+
+  	camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, MIN_DISTANCE, MAX_DISTANCE );
+    camera.position.set(0, 100, 500);
+
+  	scene = new THREE.Scene();
+    dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+		dirLight.position.set( 10, 10, 50).normalize();
+		scene.add( dirLight );
+
+    // barGraph module barGraph.init(number of columns, dataset, scene)
+    var makeGraph = barGraph.init(13, dataTmp, scene);
+    // label.create(text, font, scene, size, x, y, z, rotation);
+    var title = label.create("Canadian Provinces by Population", font, scene, 14, -125, 100, 5, 0);
+    var column = [];
+    var startLabelX = -125;
+    for (var i = 0; i < dataTitle.length; i++){
+      column.push(label.create(dataTitle[i], font, scene, 6, startLabelX+(i*25), -82, 0, 150));
+      console.log(column[i].position.x);
+    }
+
+    controls = new THREE.OrbitControls(camera);
+    controls.minDistance = 100;
+    controls.maxDistance = 150;
+    controls.zoomSpeed = 1;
+    controls.rotateSpeed = 1;
+
+  	renderer = new THREE.WebGLRenderer( { antialias: true } );
+  	renderer.setSize( window.innerWidth, window.innerHeight );
+  	document.body.appendChild( renderer.domElement );
+
+    window.addEventListener( 'resize', onWindowResize, false );
+  }
+
+  function animate() {
+
+  	requestAnimationFrame( animate );
+    controls.update();
+  	renderer.render( scene, camera );
+
+  }
+
+	function onWindowResize() {
+		windowHalfX = window.innerWidth / 2;
+		windowHalfY = window.innerHeight / 2;
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
+		renderer.setSize( window.innerWidth, window.innerHeight );
+	}
+
+  </script>
 </body>
 </html>
