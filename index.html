@@ -4,40 +4,69 @@
 <meta charset="utf-8" />
 <title>Data Visuals - Three JS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body{
+      background-color: #F0F0F0;
+      overflow: hidden;
+    }
+    #header{
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      color: #FFF;
+      z-index: 1;
+    }
+  </style>
 </head>
-
 <body>
+  <div id="header">
+    <h3>Creating Graphs with THREE.JS</h3>
+    <h4>Stat: <span id="stat"></span></h4>
+  </div>
   <script src="node_modules/three/build/three.js"></script>
   <script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
   <script src="libraries/graph.js"></script>
   <script>
-
+  var container;
   var camera, scene, renderer, controls, dirLight;
-  var MAX_DISTANCE = 350;
+  var MAX_DISTANCE = 550;
   var MIN_DISTANCE = 1;
-  var line, lineMaterial, lineGeometry;
-  var gridHelper, axesHelper;
+
+  var raycaster;
+
+  var canadaGraph, localStats = [];
+  var elemStats = document.getElementById("stat");
+
+  var mouse = new THREE.Vector2();
+  var INTERSECTED;
 
   var windowHalfX = window.innerWidth / 2;
 	var windowHalfY = window.innerHeight / 2;
 
-  var dataJSON;
-  var dataTmp = [2528430, 152784, 957600, 760868, 8425996, 14279196, 1343371, 1168057, 4306039, 4841078, 38669, 44718, 38243];
-  var dataTitle = ["Newfoundland and Labrador", "Prince Edward Island", "Nova Scotia", "New Brunswick", "Quebec", "Ontario", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut"];
-
-  var oReq = new XMLHttpRequest();
-  oReq.onload = reqListener;
-  oReq.open("get", "data/sampleData.json", true);
-  oReq.send();
-
-  function reqListener(e) {
-      // dataJSON = JSON.parse(this.responseText);
-      // dataTmp.push(dataJSON);
-      // console.log(dataJSON.Country[0].Canada);
-      // console.log(dataTmp[0].Country[0].Canada);
-  }
-
-  // console.log(rawJSON.Country[0]);
+//JSON files must read like this
+  var dataJSON = {
+    "country": [
+      {"name": "Canada",
+      "title": "Canadian Provinces by Population",
+        "provinces": [
+          {"name": "Newfoundland and Labrador", "population": 528430},
+          {"name": "Prince Edward Island", "population": 152784},
+          {"name": "Nova Scotia", "population": 957600},
+          {"name": "New Brunswick", "population": 760868},
+          {"name": "Quebec", "population": 8425996},
+          {"name": "Ontario", "population": 14279196},
+          {"name": "Manitoba", "population": 1343371},
+          {"name": "Saskatchewan", "population": 1168057},
+          {"name": "Alberta", "population": 4306039},
+          {"name": "British Columbia", "population": 4841078},
+          {"name": "Yukon", "population": 38669},
+          {"name": "Northwest Territories", "population": 44718},
+          {"name": "Nunavut", "population": 38243}
+        ]
+      }
+    ]
+  };
 
   var loader = new THREE.FontLoader();
   loader.load('assets/fonts/Roboto_Regular.json', function ( font ) {
@@ -46,45 +75,94 @@
   });
 
   function init(font) {
+    container = document.createElement( 'div' );
+    container.style.position = 'relative';
+    container.style.float = 'left';
+		document.body.appendChild( container );
+
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0x404040 );
+    scene.lookAt(0, 0, 300);
 
   	camera = new THREE.PerspectiveCamera( 120, window.innerWidth / window.innerHeight, MIN_DISTANCE, MAX_DISTANCE );
-    camera.position.set(0, 100, 500);
+    camera.position.set(200, 100, 500);
 
-  	scene = new THREE.Scene();
     dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-		dirLight.position.set( 10, 10, 50).normalize();
+		dirLight.position.set( 10, 10, 50);
 		scene.add( dirLight );
 
-    // barGraph module barGraph.init(number of columns, dataset, scene)
-    var makeGraph = barGraph.init(13, dataTmp, scene);
-    // label.create(text, font, scene, size, x, y, z, rotation);
-    var title = label.create("Canadian Provinces by Population", font, scene, 14, -125, 100, 5, 0);
-    var column = [];
-    var startLabelX = -125;
-    for (var i = 0; i < dataTitle.length; i++){
-      column.push(label.create(dataTitle[i], font, scene, 6, startLabelX+(i*25), -82, 0, 150));
-      console.log(column[i].position.x);
-    }
+    raycaster = new THREE.Raycaster();
 
-    controls = new THREE.OrbitControls(camera);
-    controls.minDistance = 100;
-    controls.maxDistance = 150;
-    controls.zoomSpeed = 1;
-    controls.rotateSpeed = 1;
+    let graphs = new graph.Graph();
+
+    // barGraph module Graph.barGraph(number of columns, dataset, scene)
+    canadaGraph = graphs.barGraph(13, dataJSON, font, scene);
+    scene.add(canadaGraph);
+
+    let labels = new graph.Label();
+    // createGraph.title(text, font, scene, size, x, y, z, rotation);
+    let title = labels.createLabel(dataJSON.country[0].title, font, scene, 14, 0, 180, 5, 0);
+    scene.add(title);
 
   	renderer = new THREE.WebGLRenderer( { antialias: true } );
   	renderer.setSize( window.innerWidth, window.innerHeight );
-  	document.body.appendChild( renderer.domElement );
 
+    controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.target.set(canadaGraph.width/2, canadaGraph.height/2,0);
+    controls.minDistance = 120;
+    controls.maxDistance = 200;
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.1;
+    controls.rotateSpeed = 0.5;
+
+  	container.appendChild( renderer.domElement );
+
+    // when the mouse moves, call the given function
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
     window.addEventListener( 'resize', onWindowResize, false );
   }
 
   function animate() {
-
   	requestAnimationFrame( animate );
     controls.update();
-  	renderer.render( scene, camera );
+    render();
+  }
 
+  function render(){
+    // find intersections
+		raycaster.setFromCamera( mouse, camera );
+		var intersects = raycaster.intersectObjects( canadaGraph.children, true);
+
+    if ( intersects.length > 0 ) {
+      if ( INTERSECTED != intersects[ 0 ].object ) {
+        if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+
+        elemStats.innerHTML = dataJSON.country[0].provinces[intersects[ 0 ].object.id-12].population;
+
+        INTERSECTED = intersects[ 0 ].object;
+        INTERSECTED.currentHex = INTERSECTED.material.color.getHex();
+        INTERSECTED.material.color.setHex( 0xecf0f1 );
+
+      }
+
+    } else {
+
+      if ( INTERSECTED ) INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+
+      INTERSECTED = null;
+
+    }
+    renderer.render( scene, camera );
+  }
+
+
+  function onDocumentMouseMove(event) {
+    // the following line would stop any other event handler from firing
+    event.preventDefault();
+
+    // update the mouse variable
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
   }
 
 	function onWindowResize() {
